@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Casos de Prueba</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+          <div class="container">
+            <div class="logo">
+              <a href="index.html"><img src="assets/images/logo.png" alt="#" /></a>
+            </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="pruebas.html">Pruebas de software</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="clasificacion.html">Clasificación de QA</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="plan.html">Plan de Pruebas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="casos.html">Casos de Prueba</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="referencias.html">Referencias</a>
+              </li>
+          </div>
+      </nav>
+    </header>
+
+    <section class="casos my-5">
+      <h2 class="text-center my-3">Casos de Pruebas</h2>
+      <div class="container">
+      <p>A continuación se muestran los casos de pruebas creados en función de los tres suites especificados con anterioridad y acorde a los tipos de prueba definidos:</p>
+      <h4>Pruebas de Humo</h4>
+        <ul>
+          <li>Método GET:</li>
+          <p>ID-16: Revisión de tabla organizaciones.</p>
+          <p>ID-17: Revisión tabla superhéroes.</p>
+        </ul>  
+      <h4>Pruebas Unitarias</h4>
+      <ul>
+        <li>Método POST:</li>
+          <p>ID-1: Ingreso exitoso de una organización.</p>
+          <p>ID-2: Ingreso exitoso de un superhéroe.</p>
+          <p>ID-3: Ingreso fallido de una organización por repetido.</p>
+          <p>ID-4: Ingreso fallido de un superhéroe por repetido.</p>
+          <p>ID-5: Ingreso fallido de una organización por nombre vacío.</p>
+          <p>ID-6: Ingreso fallido de una superhéroe por nombre vacío.</p>
+          <p>ID-7: Ingreso fallido de un superhéroe por auscencia de organización.</p>
+        <li>Método GET</li>
+          <p>ID-8: Revisión exitosa de las organizaciones.</p>
+          <p>ID-9: Revisión exitosa de los superhéroes.</p>
+          <p>ID-10: Revisión exitosa de una organización.</p>
+          <p>ID-11: Revisión exitosa de un superhéroe.</p>
+          <p>ID-12: Revisión fallida de una organización.</p>
+          <p>ID-13: Revisión fallida de un superhéroe.</p>
+        <li>Método DELETE</li>
+          <p>ID-14: Eliminación exitosa de una organización.</p>
+          <p>ID-15: Eliminación exitosa de un superhéroe.</p>
+      </ul>  
+      <h4>Pruebas de Rendimiento:</h4>
+      <p>Se considera como métrica el tiempo en ms que la API tarda en responder la petición/request.</p>
+      <ul>
+        <li>Método POST:</li>
+          <p>ID-18: Ingreso eficiente de una organización.</p>
+          <p>ID-19: Ingreso eficiente de un superhéroe.</p>
+        <li>Método GET</li>
+          <p>ID-20: Revisión eficiente de las organizaciones.</p>
+          <p>ID-21: Revisión eficiente de los superhéroes.</p>
+      </ul>  
+
+        <a href="others/TestSuites.xml" download>
+          <button type="button" class="btn btn-primary">Descargar Casos de Prueba</button>
+        </a>       
+      </div>
+    </section>
+
+    <div class="separador"></div>
+
+    <footer class="page-footer font-small fondo-footer">
+      <div class="footer-copyright text-center py-3">
+        <font color="#FFFFFF"> © 2023 Copyright Felipe Cruz </font>
+      </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
