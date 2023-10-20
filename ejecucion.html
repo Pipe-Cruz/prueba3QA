@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Clasificación QA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+
+    <header>
+      <nav class="navbar navbar-expand-lg">
+          <div class="container">
+            <div class="logo">
+              <a href="index.html"><img src="assets/images/logo.png" alt="#" /></a>
+            </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="plan.html">Plan de Pruebas Actual</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="casos.html">Casos de Prueba</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="ejecucion.html">Ejecución Plan de Pruebas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="plan2.html">Plan de Pruebas futuro</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="referencias.html">Referencias</a>
+              </li>
+          </div>
+      </nav>
+    </header>
+
+    <section class="postman my-5">
+      <h2 class="text-center my-5 titulo-fondo">Ejecución del Plan de Pruebas</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <h4>Postman</h4>
+            <p>Debido a que el proyecto a testear es una API Rest, los test fueron realizados mediante la herramienta Postman. Postman es una plataforma de colaboración utilizada por desarrolladores para diseñar, construir, y probar API. Proporciona una variedad de herramientas que simplifican el proceso de trabajar con API, lo que lo convierte en una herramienta valiosa para desarrolladores de software y equipos de desarrollo.</p>
+            <p>Dentro de las funcionalidades utilizadas destacan:</p>
+              <ul>
+                <li><a href="https://learning.postman.com/docs/sending-requests/variables/">Creación de variables de colección:</a> Dado que la URL de la API siempre comienza con http://localhost:8080/api, se ha decidico parametrizar en la variable URL.
+                  <img class="img-fluid" src="assets/images/Postman/parametrizar.png" alt="">
+                </li>
+                <li><a href="https://learning.postman.com/docs/writing-scripts/script-references/variables-list/">Generación de datos aleatorios:</a> Para crear organizaciones y superhéroes de manera aleatoria se utiliza código JavaScript en la sección Pre-request Script de la request correspondiente.  
+                  <img class="img-fluid" src="assets/images/Postman/random.png" alt="">
+                </li>
+              </ul>
+          </div>
+          <div class="col-6">
+            <img class="img-fluid" src="assets/images/Postman/postman.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="casos">
+      <div class="container">
+      <p>A continuación, se muestran los resultados de los casos definidos con anterioridad:</p>
+      <h4>Pruebas de Humo</h4>
+        <ul>
+          <li>Método GET:</li>
+            <ul>
+              <li>ID-1: Revisión de tabla organizaciones: Se puede apreciar que existe la entidad organizaciones en la base de datos, que como su nombre indica es utilizada para almacenar las organizaciones. Por lo tanto la prueba se considera <strong>aprobada</strong>.</li>
+              <img class="img-fluid" src="assets/images/Postman/SmokeTest/ID-1.png" alt="">
+              <li>ID-2: Revisión tabla superhéroes: Se puede apreciar que existe la entidad superhéroes utilizada para almacenar a los superhéroes. Por lo tanto la prueba se considera <strong>aprobada</strong>.</li>
+              <img class="img-fluid" src="assets/images/Postman/SmokeTest/ID-2.png" alt="">
+            </ul>  
+        </ul>  
+      <h4>Pruebas Unitarias</h4>
+      <ul>
+        <li>Método POST:</li>
+          <ul>
+            <li>ID-3: Ingreso exitoso de una organización: Para ingresar una organización se debe indicar un nombre, su visibilidad (púlico/privado) y la fecha de creación. Para ejecutar esta prueba se hizo uso de variables aleatorias, y como se puede apreciar, se crea correctamente una entidad de tipo organización. Por tanto la prueba se considera Por lo tanto la prueba se considera <strong>aprobada</strong>.</li>
+            <img class="img-fluid" src="assets/images/Postman/UnitTest/ID-3.png" alt="">
+            <li>ID-4: Ingreso exitoso de un superhéroe: Para ingresar un superhéroe se requiere un alias, su estado de vigencia (true/false) y el id de la organización a la que pertenece. Como se puede apreciar, el alias del superhéroe se genera con una variable aleatoria, y la creación de la entidad es correcta, por tanto se considera la prueba Por lo tanto la prueba se considera <strong>aprobada</strong>.</li>
+            <img class="img-fluid" src="assets/images/Postman/UnitTest/ID-4.png" alt="">
+            <li>ID-5: Ingreso fallido de una organización por repetido: Se puede apreciar que se crea una organización con el nombre de una que ya existe, ya que si bien se le asigna un id diferente, no deberían existir organizaciones con el mismo nombre, por tanto se considera la prueba <strong>fallida</strong>.</li>
+            <img class="img-fluid" src="assets/images/Postman/UnitTest/ID-5.png" alt="">
+            <li>ID-6: Ingreso fallido de un superhéroe por repetido: Se puede apreciar que se crea un superhéroe con un nombre existente, ya que si bien se le asigna un id diferente, no deberían existir superhéroes con el mismo nombre, por tanto se considera la prueba <strong>fallida</strong>.</li>
+            <img class="img-fluid" src="assets/images/Postman/UnitTest/ID-6.png" alt="">
+            <li>ID-7: Ingreso fallido de una organización por nombre vacío: Se puede apreciar que se crea una organización con un nombre vacío, lo cual no debería ocurrir, por tanto se considera la prueba <strong>fallida</strong>.</li>
+            <img class="img-fluid" src="assets/images/Postman/UnitTest/ID-7.png" alt="">
+            <li>ID-8: Ingreso fallido de una superhéroe por nombre vacío: Se puede apreciar que se crea una superhéroe con un nombre vacío, lo cual no debería ocurrir, por tanto se considera la prueba <strong>fallida</strong>.</li>
+            <img class="img-fluid" src="assets/images/Postman/UnitTest/ID-8.png" alt="">
+          </ul>
+        <li>Método GET</li>
+          <ul>
+            <li>ID-9: Revisión exitosa de las organizaciones: Se puede revisar las organizaciones creadas con anterioridad de manera exitosa, por tanto se considera la prueba <strong>aprobada</strong>.</li>
+            <img class="img-fluid" src="assets/images/Postman/UnitTest/ID-9.png" alt=""> 
+            <li>ID-10: Revisión exitosa de los superhéroes: Se puede revisar los superhéroes creados con anterioridad de manera exitosa, por tanto se considera la prueba <strong>aprobada</strong>.</li>
+            <img class="img-fluid" src="assets/images/Postman/UnitTest/ID-10.png" alt="">
+            <li>ID-11: Revisión exitosa de una organización particular: Se puede revisar una organización en particular creada con anterioridad. Se retornan los datos correctos, por tanto se considera la prueba <strong>aprobada</strong>.</li>
+            <img class="img-fluid" src="assets/images/Postman/UnitTest/ID-11.png" alt="">
+            <li>ID-12: Revisión exitosa de un superhéroe particular: Se puede revisar un superhéroe en particular creada con anterioridad. Se retornan los datos correctos, por tanto se considera la prueba <strong>aprobada</strong>.</li>
+            <img class="img-fluid" src="assets/images/Postman/UnitTest/ID-12.png" alt="">
+            <li>ID-13: Revisión fallida de una organización: Al solicitar una organizacion que no existe se debe entregar un error, como el que se puede apreciar, por tanto se considera la prueba <strong>aprobada</strong>.</li>
+            <img class="img-fluid" src="assets/images/Postman/UnitTest/ID-13.png" alt="">
+            <li>ID-14: Revisión fallida de un superhéroe: Al solicitar un superhéroe que no existe se debe entregar un error, como el que se puede apreciar, por tanto se considera la prueba <strong>aprobada</strong>.</li>
+            <img class="img-fluid" src="assets/images/Postman/UnitTest/ID-14.png" alt="">
+          </ul>
+        <li>Método DELETE</li>
+        <ul>
+          <li>ID-15: Eliminación exitosa de una organización: Al entregar el id de la organización a eliminar, esta se elimina de la entidad de las organizaciones. Mediante la prueba ID-1 podemos confirmar esto, y efectivamente funciona como debería, por tanto se considera la prueba <strong>aprobada</strong>.</li>
+          <img class="img-fluid" src="assets/images/Postman/UnitTest/ID-15.png" alt="">
+          <li>ID-16: Eliminación exitosa de un superhéroe: Al entregar el id del superhéroe a eliminar, esta se elimina de la entidad de los superhéroes. Mediante la prueba ID-2 podemos confirmar esto, y efectivamente funciona como debería, por tanto se considera la prueba <strong>aprobada</strong>.</li>
+          <img class="img-fluid" src="assets/images/Postman/UnitTest/ID-16.png" alt="">
+        </ul>
+      </ul>  
+      <h4>Pruebas de Rendimiento:</h4>
+      <p>Se considera como métrica el tiempo en ms que la API tarda en responder la petición/request.</p>
+      <ul>
+        <li>Método POST:</li>
+        <ul>
+          <li>ID-17: Ingreso eficiente de una organización: Se considera un tiempo eficiente la creación de una organización en un tiempo menor a 100 ms. Como se puede apreciar, la request tarda 6 ms, por tanto la prueba se considera <strong>aprobada</strong>.</li>
+          <img class="img-fluid" src="assets/images/Postman/PerformanceTest/ID-17.png" alt="">
+          <li>ID-18: Ingreso eficiente de un superhéroe: Se considera un tiempo eficiente la creación de un superhéroe en un tiempo menor a 100 ms. Como se puede apreciar, la request tarda 7 ms, por tanto la prueba se considera <strong>aprobada</strong>.</li>
+          <img class="img-fluid" src="assets/images/Postman/PerformanceTest/ID-18.png" alt="">
+        </ul>
+        <li>Método GET</li>
+        <ul>
+          <li>ID-19: Revisión eficiente de las organizaciones: Se considera un tiempo eficiente la revisión de la entidad organización en un tiempo menor a 100 ms. Como se puede apreciar, la request tarda 7 ms, por tanto la prueba se considera <strong>aprobada</strong>.</li>
+          <img class="img-fluid" src="assets/images/Postman/PerformanceTest/ID-18.png" alt="">
+          <li>ID-20: Revisión eficiente de los superhéroes: Se considera un tiempo eficiente la revisión de la entidad superhéroes en un tiempo menor a 100 ms. Como se puede apreciar, la request tarda 7 ms, por tanto la prueba se considera <strong>aprobada</strong>.</li>
+          <img class="img-fluid" src="assets/images/Postman/PerformanceTest/ID-18.png" alt="">
+        </ul>
+      </ul> 
+    </section> 
+
+      <section class="Indice my-5">
+        <h2 class="text-center my-3">Conclusiones</h2>
+        <div class="container">
+        <p>Posterior a realizar las diversas pruebas, se ha llegado a la conclusión de que la API Rest cumple con las funciones básicas, no obstante no presenta restricciones para crear las entidades, tal como nombres no existentes, diferente de vació o null, entre otros. Por otra parte, al crear un superhéroe, se obliga a que este pertenezca a una organización, considerando que no siempre podría ser el caso. Finalmente, en caso de solicitar una entidad que no existe, el mensaje de error podría ser uno más agradable.</p> 
+        <p>Para revisar de manera detallada la ejecución del plan de pruebas, se recomienda descargar el informe generado con la herramienta TestLink, ya que contiene los casos de prueba con los pasos detallados para ejecutar cada una y el resultado esperado/obtenido.</p>
+        <a href="others/InformePP.pdf" download>
+          <button type="button" class="btn btn-primary">Descargar Informe</button>
+        </a>  
+      </div>
+      </section>
+
+    <div class="separador"></div>
+    
+    <footer class="page-footer font-small fondo-footer">
+      <div class="footer-copyright text-center py-3">
+        <font color="#FFFFFF"> © 2023 Copyright Felipe Cruz </font>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
