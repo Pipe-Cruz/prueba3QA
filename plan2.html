@@ -42,15 +42,52 @@
       </nav>
     </header>
 
-    <section class="plan my-5">
+    <section class="plan2 my-5">
       <h2 class="text-center my-5 titulo-fondo">Plan de Pruebas</h2>
       <div class="container">
-        <p>El presente plan de pruebas fue planificado para la entrega 3 del desarrollador FullStack la cual consistía en crear una aplicación Web con Angular.</p>
-        <p>A continuación, se presenta el plan de pruebas desarrollado con la herramienta TestLink:</p>
-    </section>
+        <p>El presente plan de pruebas fue planificado para la entrega 3 del desarrollador FullStack la cual consistía en crear una aplicación Web con Angular. Para el desarrollo de las pruebas se considerará un enfoque de pruebas funcionales y no funcionales. Para las primeras ya se ha presentado la herramienta Postman para realizar peticiones a los endpoints. Sumado a este tipo de pruebas, se agrega Selenium. Por otro lado, para las pruebas no funcionales, se utilizará la herramienta SonarCloud. </p>
+        <div class="row">
+          <div class="col-6">
+            <h4>Selenium Web Driver</h4>
+            <p>Selenium WebDriver es una herramienta de automatización de pruebas ampliamente utilizada para la automatización de pruebas funcionales en aplicaciones web. Selenium WebDriver permite a los desarrolladores y probadores automatizar la interacción de un navegador web con una aplicación web, lo que significa que se pueden realizar pruebas automatizadas para verificar que la aplicación web funcione correctamente desde la perspectiva de un usuario.</p>
+            <p>Las características y funcionalidades de Selenium incluyen:</p>
+            <ul>
+              <li>Automatización de navegadores.</li>
+              <li>Admitemúltiples lenguajes de programación.</li>
+              <li>Interacción con elementos web.</li>
+              <li>Pruebas cruzadas y multiplataforma.</li>
+              <li>Integración con frameworks de prueba.</li>
+              <li>Comunidad activa y soporte.</li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <img class="img-fluid" src="assets/images/Selenium.jpg" alt="">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <h4>SonarCloud</h4>
+            <p>SonarCloud es un servicio en la nube proporcionado por SonarSource que se utiliza para realizar análisis estáticos de código y evaluar la calidad del código fuente de aplicaciones en repositorios alojados en plataformas como GitHub y Azure DevOps. SonarCloud es una versión basada en la nube de la plataforma SonarQube, que es ampliamente utilizada para la administración de la calidad del código en proyectos de desarrollo de software.</p>
+            <p>Las características y funcionalidades de SonarCloud incluyen:</p>
+            <ul>
+              <li>Análisis estático de código.</li>
+              <li>Detección de duplicados.</li>
+              <li>Medición de métricas de calidad del código.</li>
+              <li>Integración con sistemas de control de versiones.</li>
+              <li>Informes detallados y paneles de control.</li>
+              <li>Soporte para varios lenguajes de programación.</li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <img class="img-fluid" src="assets/images/sonarcloud-.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section> 
 
     <section class="crear-proyecto my-5">
       <div class="container">
+        <p>A continuación, se presenta el plan de pruebas desarrollado en TestLink:</p>
         <div class="row">
           <div class="col-6 text-justify">
             <h4>Crear Proyecto</h4>
@@ -58,7 +95,7 @@
               </p>
           </div>
           <div class="col-6">
-            <img class="img-thumbnail" src="assets/images/testlink/proyecto.png" alt="">
+            <img class="img-thumbnail" src="assets/images/testlink/PP2/proyecto.png" alt="">
           </div>
         </div>
       </div>
@@ -81,12 +118,12 @@
               <li>Casos de prueba</li>
               <li>Criterios de éxito</li>
             </ul>
-            <a href="others/PlanTestingSoftware.pdf" download>
+            <a href="others/PlanTestingSoftware2.pdf" download>
               <button type="button" class="btn btn-primary">Descargar Plan de Pruebas</button>
             </a>            
           </div>
           <div class="col-6">
-            <img class="img-thumbnail" src="assets/images/testlink/plan-pruebas.png" alt="">
+            <img class="img-thumbnail" src="assets/images/testlink/PP2/plan-pruebas.png" alt="">
           </div>
         </div>
       </div>
@@ -101,7 +138,7 @@
             <p>Para el ejercicio práctico, como se está inicializando el proyecto, la versión del Build corresponde a la V 1.0.</p>
           </div>
           <div class="col-6">
-            <img class="img-thumbnail" src="assets/images/testlink/build.png" alt="">
+            <img class="img-thumbnail" src="assets/images/testlink/PP2/build.png" alt="">
           </div>
         </div>
       </div>
@@ -113,15 +150,9 @@
           <div class="col-6 text-justify">
             <h4>Suite</h4>
             <p>Una suite es un grupo organizado y coherente de casos de prueba relacionados que se diseñan y ejecutan de manera conjunta para probar una característica específica o un conjunto de características de un software. Las suites de pruebas ayudan a organizar y estructurar el proceso de pruebas al agrupar casos de prueba que tienen un propósito común o están destinados a evaluar un aspecto particular del software.</p>
-            <p>Para el ejercicio prático se crearon tres suites, con la finalidad de probar tres métodos HTTP que son:</p>
-            <ul>
-              <li>POST: Inserción de recursos.</li>
-              <li>GET: Revisión de recursos.</li>
-              <li>DELETE: Eliminación de recursos.</li>
-            </ul>
           </div>
           <div class="col-6">
-            <img class="img-thumbnail" src="assets/images/testlink/suite.png" alt="">
+            <img class="img-thumbnail" src="assets/images/testlink/PP2/suite.png" alt="">
           </div>
         </div>
       </div>
@@ -141,14 +172,10 @@
               <li>Datos de entrada</li>
               <li>Resultados esperados</li>
               <li>Nivel de importancia</li>
-            </ul>
-            <p>El desarrollo de los casos de prueba para nuestro aplicativo práctico se encuentra en la siguiente sección:</p>
-            <a href="ruta/a/tu/archivo.html">
-              <button type="button" class="btn btn-secondary btn-square">Casos de Prueba</button>
-            </a>                               
+            </ul>                              
           </div>
           <div class="col-6">
-            <img class="img-thumbnail" src="assets/images/testlink/casos.png" alt="">
+            <img class="img-thumbnail" src="assets/images/testlink/PP2/casos.png" alt="">
           </div>
         </div>
       </div>
